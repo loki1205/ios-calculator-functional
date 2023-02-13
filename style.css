@@ -1,0 +1,186 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    min-width:420px;
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.status-bar{
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    padding:0.4em;
+    font-size: 0.85rem;
+}
+
+.display-area{
+    min-height: 30vh;
+    display:flex;
+    justify-content: end;
+    align-items: flex-end;
+    padding-right: 0.8em;
+    padding-bottom: 1em;
+}
+
+#digits{
+    font-size:4.5rem;
+    color:white;
+    font-family: 'Roboto';
+    font-weight: 100;
+}
+
+.light-font{
+    color: #0d0d0d !important;
+}
+
+.number-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+input{
+    border:none;
+    width:100%;
+    padding:0;
+    height: 100%;
+}
+
+.battery{
+    height: 18px;
+}
+
+
+.first-status, .middle-status, .last-status{
+    display: flex;
+    align-items: center;
+}
+
+.first-status{
+    flex:1;
+}
+
+.middle-status{
+    flex: 1;
+    justify-content: center;
+}
+
+.last-status{
+    justify-content: end;
+    flex:1;
+}
+
+body > main > section > section.status-bar > section > svg{
+    fill:white;
+}
+
+svg{
+    width: auto;
+    margin-left: 10px;
+    height: 12px;
+    margin-top: -1px;
+}
+
+.numbers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    width:100%;
+    height:100px;
+    background-color: #272626;
+    font-family: "Roboto";
+    color:white
+}
+
+.number-grid-2{
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+
+
+.operators, .equalTo{
+    background-color: #FF9500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    width:100%;
+    height:100px;
+    font-family: "Roboto";
+}
+
+
+div{
+    cursor:pointer;
+}
+
+.first, .second, .third{
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    width:100%;
+    height:100%;
+    font-family: "Roboto";
+    color: white;
+}
+
+.light {
+    background-color: #ccc;
+    color:black;
+  }
+
+.light_2{
+    background-color: #aaa;
+    color:black;
+}
+
+@media screen and (max-width:900px) {
+    .numbers:active{
+        filter: brightness(0.85);
+    }
+    .screen{
+        min-width: 100%;
+    }
+}
+
+@media screen and (min-width:901px) {
+    .numbers:hover{
+        filter: brightness(0.85);
+    }
+    .operators:hover,.equalTo:hover{
+        filter: brightness(0.85);
+    }
+    .first:hover,.second:hover,.third:hover{
+        filter: brightness(0.85);
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
